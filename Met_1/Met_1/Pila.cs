@@ -1,12 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Met_1
 {
-	/// <summary>
-	/// Description of Pila.
-	/// </summary>
+
 	public class Pila : Coleccionable
 	{
 		private List<Comparable>pila;

@@ -1,19 +1,9 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Marcos
- * Date: 23/3/2025
- * Time: 23:07
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Met_1
 {
-	/// <summary>
-	/// Description of Cola.
-	/// </summary>
+
 	public class Cola : Coleccionable
 	{
 		private List<Comparable>lista;

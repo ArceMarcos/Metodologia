@@ -2,9 +2,6 @@
 
 namespace Met_1
 {
-	/// <summary>
-	/// Description of Persona.
-	/// </summary>
 	public abstract class Persona : Comparable
 	{
 		protected string nombre;
