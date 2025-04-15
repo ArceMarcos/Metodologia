@@ -1,0 +1,12 @@
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Met_1\bin\Debug\Proyecto_2.exe.config
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Met_1\bin\Debug\Proyecto_2.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Met_1\bin\Debug\Proyecto_2.pdb
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Met_1\obj\Debug\Proyecto_2.csprojResolveAssemblyReference.cache
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Met_1\obj\Debug\Proyecto_2.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Met_1\obj\Debug\Proyecto_2.pdb
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Proyecto_2\bin\Debug\Proyecto_2.exe.config
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Proyecto_2\bin\Debug\Proyecto_2.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Proyecto_2\bin\Debug\Proyecto_2.pdb
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.csprojResolveAssemblyReference.cache
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\proyecto_2\Proyecto_2\obj\Debug\Proyecto_2.pdb
