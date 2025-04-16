@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Proyecto_3
+namespace Proyecto_4
 {
 	/// <summary>
 	/// Description of Alumno.
@@ -11,6 +11,10 @@ namespace Proyecto_3
 		private double promedio;
 		private EstrategiaComparacionAlumno estrategia;
 		
+		public Alumno(int promedio){
+			this.promedio=promedio;
+			this.estrategia=new ComparaAlumnoPromedio();
+		}
 		
 		public Alumno(string nombre,int dni,int legajo,double promedio): base (nombre, dni){
 			this.nombre=nombre;

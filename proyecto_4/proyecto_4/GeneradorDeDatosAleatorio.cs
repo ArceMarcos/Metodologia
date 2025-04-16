@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Proyecto_3
+namespace Proyecto_4
 {
 	/// <summary>
 	/// Description of GeneradorDeDatosAleatorio.
@@ -9,6 +9,8 @@ namespace Proyecto_3
 	{
 		private Random random=new Random();
 		private int numeroAleatorio;
+		
+		
 		public GeneradorDeDatosAleatorio(){
 			
 			
@@ -19,10 +21,8 @@ namespace Proyecto_3
 		public string stringAleatorio(int cant=5){
 			const string alfabeto = "abcdefghijklmnopqrstuvwxyz";
 			string nombreal="";
-			int indice;
 			for (int i = 0; i < cant; i++) {
-				indice=random.Next(0,25);
-				nombreal=nombreal+alfabeto[indice];
+				nombreal=nombreal+alfabeto[random.Next(0,25)];
 			}
 			return nombreal;
 		}

@@ -1,29 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Proyecto_3
+namespace Proyecto_4
 {
 	class Program
 	{
 		private static Random random=new Random();
 		public static void Main(string[] args)
 		{
-			
-			
-			Profesor profe = new Profesor("Marcos",12456789,1);
+			//USAR FABRICA DE PROFESORES
+			Profesor profe = new Profesor("M",1,1);
 			
 			Pila pila=new Pila();
+			Cola cola=new Cola();
+			ColeccionMultiple multiple=new ColeccionMultiple(pila,cola);
 			llenar(pila,2);
-			Iterador iterador = pila.CrearIterador();
+			llenar(cola,2);
+			informar(pila,2);
+			informar(cola,2);
+			imprimirElementos(cola);
+			//informar(multiple);
 			
-			iterador.primero();
-			while (!iterador.fin()) {
-				profe.agregarObservador((Observador)iterador.actual());
-				iterador.siguiente();
-			}
-			
-			dictadoDeClase(profe);
-						
 						
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
@@ -44,7 +41,6 @@ namespace Proyecto_3
 			Console.WriteLine(c.maximo());
 			
 			//Console.WriteLine("ingrese un numero para buscar en la coleccion: ");
-			
 			Comparable com=FabricaDeComparables.crearPorTeclado(opcion);
 			
 			if (c.contiene(com)) {
@@ -54,7 +50,6 @@ namespace Proyecto_3
 				Console.WriteLine("el elemento no esta en la coleccion ");
 			}
 		}
-		
 //		public static Coleccionable llenarAlumnos(Coleccionable c){
 //			
 //			for (int i = 0; i < 20; i++) {
@@ -63,7 +58,6 @@ namespace Proyecto_3
 //			}
 //			return c;
 //		}	
-		
 		public static void imprimirElementos(Coleccionable c){
 			Iterador ite=c.CrearIterador();
 			ite.primero();
@@ -74,12 +68,12 @@ namespace Proyecto_3
 			
 		}
 		
-		public static void dictadoDeClase(Profesor profe){
-			for (int i = 0; i < 5; i++) {
-				profe.hablarALaClase();
-				profe.escribirEnElPizarron();
-			}
-		}
-			
+//		public static void dictadoDeClase(Profesor profe){
+//			for (int i = 0; i < end; i++) {
+//				
+//			}
+//			
+//		}
+//			
 	}
 }

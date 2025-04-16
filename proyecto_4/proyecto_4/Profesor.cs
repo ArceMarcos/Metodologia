@@ -1,34 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Proyecto_3
+namespace Proyecto_4
 {
 	/// <summary>
 	/// Description of Profesor.
 	/// </summary>
-	public class Profesor:Persona, Observado , Comparable
+	public class Profesor:Persona, Observado
 	{
 		private int antiguedad;
-		private bool hablando;	
-		private List<Observador> observadores;
+		private bool hablando;
 		
+		private List<Observador> observadores;
 		public Profesor(string nombre,int dni,int a):base(nombre,dni){
 			this.antiguedad=a;
 			this.observadores=new List<Observador>();
-		}
-		
-		public bool sosIgual(Comparable c){
-			return this.antiguedad==((Profesor)c).antiguedad;
-		}
-		
-		public bool sosMenor(Comparable c){
-			return this.antiguedad > ((Profesor)c).antiguedad;
-
-		}
-		
-		public bool sosMayor(Comparable c){
-			return this.antiguedad < ((Profesor)c).antiguedad;
-						
 		}
 		public void hablarALaClase(){
 			Console.WriteLine("Hablando de algun tema ");

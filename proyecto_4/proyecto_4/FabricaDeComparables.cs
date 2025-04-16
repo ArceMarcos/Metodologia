@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Proyecto_3
+namespace Proyecto_4
 {
 
 	public abstract class FabricaDeComparables
@@ -17,7 +17,6 @@ namespace Proyecto_3
 			switch (opcion) {
 					case 1: fabrica = new FabricaDeNumeros();break;
 					case 2: fabrica = new FabricaDeAlumnos();break;
-					case 3: fabrica = new FabricaDeProfesores();break;
 			}
 			
 			return fabrica.crearAleatorio();
@@ -28,7 +27,6 @@ namespace Proyecto_3
 			switch (opcion) {
 					case 1: fabrica = new FabricaDeNumeros();break;
 					case 2: fabrica = new FabricaDeAlumnos();break;
-					case 3: fabrica = new FabricaDeProfesores();break;
 			}
 			
 			return fabrica.crearPorTeclado();

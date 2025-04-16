@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{DDB9B9D9-89CD-4998-BB76-E57D8BEAF8A3}</ProjectGuid>
+    <ProjectGuid>{63138DE3-D466-4208-98E6-7AF504E9228A}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Proyecto_3</RootNamespace>
-    <AssemblyName>Proyecto_3</AssemblyName>
+    <RootNamespace>proyecto_4</RootNamespace>
+    <AssemblyName>proyecto_4</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
@@ -62,7 +62,6 @@
     <Compile Include="FabricaDeAlumnos.cs" />
     <Compile Include="FabricaDeComparables.cs" />
     <Compile Include="FabricaDeNumeros.cs" />
-    <Compile Include="FabricaDeProfesores.cs" />
     <Compile Include="GeneradorDeDatosAleatorio.cs" />
     <Compile Include="Iterable.cs" />
     <Compile Include="Iterador.cs" />
