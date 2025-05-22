@@ -9,7 +9,6 @@ namespace Proyecto_3
 		public static void Main(string[] args)
 		{
 			
-			
 			Profesor profe = new Profesor("Marcos",12456789,1);
 			
 			Pila pila=new Pila();
@@ -23,7 +22,7 @@ namespace Proyecto_3
 			}
 			
 			dictadoDeClase(profe);
-						
+			imprimirElementos(pila);
 						
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);

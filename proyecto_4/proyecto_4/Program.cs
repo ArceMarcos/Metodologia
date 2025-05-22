@@ -8,22 +8,58 @@ namespace Proyecto_4
 		private static Random random=new Random();
 		public static void Main(string[] args)
 		{
-			//USAR FABRICA DE PROFESORES
-			Profesor profe = new Profesor("M",1,1);
+			Teacher teacher=new Teacher();
 			
 			Pila pila=new Pila();
-			Cola cola=new Cola();
-			ColeccionMultiple multiple=new ColeccionMultiple(pila,cola);
-			llenar(pila,2);
-			llenar(cola,2);
-			informar(pila,2);
-			informar(cola,2);
-			imprimirElementos(cola);
-			//informar(multiple);
+			Pila pila2=new Pila();
 			
-						
-			Console.Write("Press any key to continue . . . ");
-			Console.ReadKey(true);
+			llenar(pila,2);
+			llenar(pila,3);
+			Iterador iterador = pila.CrearIterador();
+			
+			iterador.primero();
+			while (!iterador.fin()) {
+				Student student=new AlumnoAdapter((Alumno)iterador.actual());
+				pila2.agregar((AlumnoAdapter)student);
+				teacher.goToClass(student);
+				iterador.siguiente();
+
+			}
+			
+			teacher.teachingAClass(); 
+			
+			iterador =pila2.CrearIterador();
+			iterador.primero();
+			
+			while (!iterador.fin()) {
+				IAlumnoAdapterDecorado AlumnoD=(AlumnoAdapter)iterador.actual();
+				AlumnoD= new DecoradoLegajo((AlumnoAdapter)iterador.actual(),AlumnoD);
+				AlumnoD= new DecoradoNotaEnLetras((AlumnoAdapter)iterador.actual(),AlumnoD);
+				AlumnoD= new DecoradoPromocion((AlumnoAdapter)iterador.actual(),AlumnoD);
+				AlumnoD= new DecoradoRecuadro((AlumnoAdapter)iterador.actual(),AlumnoD);
+				Console.WriteLine(AlumnoD.showResult());
+				iterador.siguiente();
+			}
+
+			Console.ReadKey();
+//			Profesor profe = new Profesor("Marcos",12456789,1);
+//			
+//			Pila pila=new Pila();
+//			llenar(pila,2);
+//			Iterador iterador = pila.CrearIterador();
+//			
+//			iterador.primero();
+//			while (!iterador.fin()) {
+//				profe.agregarObservador((Observador)iterador.actual());
+//				iterador.siguiente();
+//			}
+//			
+//			dictadoDeClase(profe);
+//			imprimirElementos(pila);
+//						
+//			Console.Write("Press any key to continue . . . ");
+//			Console.ReadKey(true);
+//		}
 		}
 		
 		public static Coleccionable llenar(Coleccionable c,int opcion){
@@ -41,6 +77,7 @@ namespace Proyecto_4
 			Console.WriteLine(c.maximo());
 			
 			//Console.WriteLine("ingrese un numero para buscar en la coleccion: ");
+			
 			Comparable com=FabricaDeComparables.crearPorTeclado(opcion);
 			
 			if (c.contiene(com)) {
@@ -50,6 +87,7 @@ namespace Proyecto_4
 				Console.WriteLine("el elemento no esta en la coleccion ");
 			}
 		}
+		
 //		public static Coleccionable llenarAlumnos(Coleccionable c){
 //			
 //			for (int i = 0; i < 20; i++) {
@@ -58,6 +96,7 @@ namespace Proyecto_4
 //			}
 //			return c;
 //		}	
+		
 		public static void imprimirElementos(Coleccionable c){
 			Iterador ite=c.CrearIterador();
 			ite.primero();
@@ -68,12 +107,16 @@ namespace Proyecto_4
 			
 		}
 		
-//		public static void dictadoDeClase(Profesor profe){
-//			for (int i = 0; i < end; i++) {
-//				
-//			}
-//			
-//		}
-//			
+		public static void dictadoDeClase(Profesor profe){
+			for (int i = 0; i < 5; i++) {
+				profe.hablarALaClase();
+				profe.escribirEnElPizarron();
+			}
+		}
+		public static int Aleatorio(int entero){
+			int aleatorio=random.Next(0,entero);
+			return aleatorio;
+		}
+			
 	}
 }

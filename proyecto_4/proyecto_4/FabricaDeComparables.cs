@@ -17,6 +17,7 @@ namespace Proyecto_4
 			switch (opcion) {
 					case 1: fabrica = new FabricaDeNumeros();break;
 					case 2: fabrica = new FabricaDeAlumnos();break;
+					case 3: fabrica = new FabricaDeAlumnosMuyEstudiosos();break;
 			}
 			
 			return fabrica.crearAleatorio();
@@ -27,6 +28,7 @@ namespace Proyecto_4
 			switch (opcion) {
 					case 1: fabrica = new FabricaDeNumeros();break;
 					case 2: fabrica = new FabricaDeAlumnos();break;
+					case 3: fabrica = new FabricaDeAlumnosMuyEstudiosos();break;
 			}
 			
 			return fabrica.crearPorTeclado();

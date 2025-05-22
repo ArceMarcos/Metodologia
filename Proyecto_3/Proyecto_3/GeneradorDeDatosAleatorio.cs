@@ -11,9 +11,9 @@ namespace Proyecto_3
 		private int numeroAleatorio;
 		public GeneradorDeDatosAleatorio(){
 			
-			
+			numeroAleatorio=NumeroAleatorio();
 		}
-		public int NumeroAleatorio(int max){
+		public int NumeroAleatorio(int max=25){
 			return this.numeroAleatorio=random.Next(0,max);
 		}
 		public string stringAleatorio(int cant=5){
@@ -21,8 +21,8 @@ namespace Proyecto_3
 			string nombreal="";
 			int indice;
 			for (int i = 0; i < cant; i++) {
-				indice=random.Next(0,25);
-				nombreal=nombreal+alfabeto[indice];
+				//indice=random.Next(0,25);
+				nombreal=nombreal+alfabeto[NumeroAleatorio()];
 			}
 			return nombreal;
 		}

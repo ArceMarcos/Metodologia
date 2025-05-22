@@ -7,23 +7,26 @@ namespace Proyecto_4
 	/// </summary>
 	public class Alumno : Persona,Comparable, Observador
 	{
-		private int legajo;
-		private double promedio;
-		private EstrategiaComparacionAlumno estrategia;
+		protected int calificacion;
+		protected int legajo;
+		protected double promedio;
+		protected EstrategiaComparacionAlumno estrategia;
 		
-		public Alumno(int promedio){
-			this.promedio=promedio;
-			this.estrategia=new ComparaAlumnoPromedio();
-		}
 		
 		public Alumno(string nombre,int dni,int legajo,double promedio): base (nombre, dni){
 			this.nombre=nombre;
 			this.dni=dni;
 			this.legajo=legajo;
 			this.promedio=promedio;
-			this.estrategia=new ComparaAlumnoPromedio();
+			this.estrategia=new ComparaAlumnoCalificacion();
+		}
+		public int getCalificacion(){
+			return this.calificacion;
 		}
 		
+		public void setCalificacion(int cali){
+			this.calificacion=cali;
+		}
 		public void SetEstrategia(EstrategiaComparacionAlumno estra){
 			this.estrategia=estra;
 		}
@@ -63,7 +66,15 @@ namespace Proyecto_4
 		}
 		
 		public override string ToString(){
-			return "Alumno: " + getNombre() + " DNI: " + getDni() + "Legajo: "+this.legajo+"Promedio: "+this.promedio;
+			return "Alumno: " + getNombre() + "      DNI: " + getDni() + "       Legajo: "+this.legajo+"      Promedio: "+this.promedio;
+		}
+		
+		public virtual int responderPregunta(int pregunta){
+			int respuesta=Program.Aleatorio(3);
+			return pregunta%(respuesta+1);
+		}
+		public string mostrarCalificacion(){
+			return getNombre()+"   "+getCalificacion();
 		}
 	}
 }
