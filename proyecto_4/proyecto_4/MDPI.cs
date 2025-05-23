@@ -143,7 +143,7 @@ namespace Proyecto_4
 			
 			// mostrar resultado
 			Console.WriteLine("Exam results");
-			//students.sort();
+			students.sort();
 			iterator.beginning();
 			while(! iterator.end())
 			{

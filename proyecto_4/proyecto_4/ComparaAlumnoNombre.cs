@@ -12,17 +12,18 @@ namespace Proyecto_4
 		}
 		
 		public bool sosIgual(Alumno a1, Alumno a2){
-			return a1.getNombre()==a2.getNombre();
+			return a1.getNombre().CompareTo(a2.getNombre())==0;
 		}
 		
 		public bool sosMenor(Alumno a1, Alumno a2){
-			return a1.getNombre().Length>a2.getNombre().Length;
+			return a1.getNombre().CompareTo(a2.getNombre())<0;
 
 		}
 		
 		public bool sosMayor(Alumno a1, Alumno a2){
-			return a1.getNombre().Length<a2.getNombre().Length;
+			return a1.getNombre().CompareTo(a2.getNombre())>0;
 						
 		}
+		
 	}
 }

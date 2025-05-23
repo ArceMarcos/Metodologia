@@ -30,14 +30,29 @@ namespace Proyecto_4
 		public string showResult(){
 			return alumno.mostrarCalificacion();
 		}
+		
+//		public bool equals(Student student){
+//			return alumno.sosIgual((Comparable)student);
+//		}
+//		public bool lessThan(Student student){
+//			return alumno.sosMenor((Comparable)student);
+//		}
+//		public bool greaterThan(Student student){
+//			return alumno.sosMayor((Comparable)student);
+//			
+//		}
+		
 		public bool equals(Student student){
-			return alumno.sosIgual((Comparable)student);
+			Alumno aluaux=new Alumno(student.getName(),0,0,0);
+			return alumno.sosIgual(aluaux);			
 		}
 		public bool lessThan(Student student){
-			return alumno.sosMenor((Comparable)student);
+			Alumno aluaux=new Alumno(student.getName(),0,0,0);
+			return alumno.sosMenor(aluaux);
 		}
 		public bool greaterThan(Student student){
-			return alumno.sosMayor((Comparable)student);
+			Alumno aluaux=new Alumno(student.getName(),0,0,0);
+			return alumno.sosMayor(aluaux);
 			
 		}
 		
@@ -52,5 +67,6 @@ namespace Proyecto_4
 		public bool sosMayor(Comparable c){
 			return alumno.sosMayor((((AlumnoAdapter)c).getAlumno()));
 		}
+			
 	}
 }

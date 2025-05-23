@@ -18,7 +18,7 @@ namespace Proyecto_4
 			this.dni=dni;
 			this.legajo=legajo;
 			this.promedio=promedio;
-			this.estrategia=new ComparaAlumnoCalificacion();
+			this.estrategia=new ComparaAlumnoNombre();
 		}
 		public int getCalificacion(){
 			return this.calificacion;
