@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Proyecto_4
+namespace Proyecto_5
 {
 
-	public interface IAlumno 
+	 public interface IAlumno 
 	{
 	 	string getNombre();
 	 	int getCalificacion();

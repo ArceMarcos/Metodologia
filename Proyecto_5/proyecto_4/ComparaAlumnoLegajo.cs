@@ -1,27 +1,27 @@
 ﻿using System;
 
-namespace Proyecto_4
+namespace Proyecto_5
 {
 	/// <summary>
 	/// Description of ComparaAlumnoDni.
 	/// </summary>
-	public class ComparaAlumnoDni : EstrategiaComparacionAlumno
+	public class ComparaAlumnoLegajo : EstrategiaComparacionAlumno
 	{
-		public ComparaAlumnoDni()
+		public ComparaAlumnoLegajo()
 		{
 		}
 		
 		public bool sosIgual(IAlumno a1, IAlumno a2){
-			return a1.getDni()==a2.getDni();
+			return a1.getLegajo()==a2.getLegajo();
 		}
 		
 		public bool sosMenor(IAlumno a1, IAlumno a2){
-			return a1.getDni()>a2.getDni();
+			return a1.getLegajo()<a2.getLegajo();
 
 		}
 		
 		public bool sosMayor(IAlumno a1, IAlumno a2){
-			return a1.getDni()<a2.getDni();
+			return a1.getLegajo()>a2.getLegajo();
 						
 		}
 	}

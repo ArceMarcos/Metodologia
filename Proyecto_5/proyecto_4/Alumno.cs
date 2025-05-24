@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Proyecto_4
+namespace Proyecto_5
 {
 	/// <summary>
 	/// Description of Alumno.
