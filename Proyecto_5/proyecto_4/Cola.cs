@@ -4,9 +4,11 @@ using System.Collections.Generic;
 namespace Proyecto_5
 {
 
-	public class Cola : Coleccionable
+	public class Cola : Coleccionable , Ordenable
 	{
 		private List<Comparable>lista;
+		OrdenEnAula1 ordenInicio, ordenAulaLlena;
+		OrdenEnAula2 ordenLlegaAlumno;
 		
 		public Cola(){
 			this.lista=new List<Comparable>();
@@ -23,6 +25,18 @@ namespace Proyecto_5
 		
 		public void encolar(Comparable c){
 			this.lista.Add(c);
+			
+			if (this.lista.Count == 1 && ordenInicio != null){
+				ordenInicio.ejecutar();
+			}
+			
+			if (ordenLlegaAlumno != null) {
+				ordenLlegaAlumno.ejecutar(c);
+			}
+			
+			if (this.lista.Count == 40 && ordenAulaLlena != null) {
+				ordenAulaLlena.ejecutar();
+			}
 		}
 		
 		public Comparable desencolar(Cola c){
@@ -65,6 +79,16 @@ namespace Proyecto_5
 				}
 			}
 			return false;
+		}
+		
+		public void setOrdenInicio(OrdenEnAula1 o){
+			this.ordenInicio=o;
+		}
+		public void setOrdenLlegaAlumno(OrdenEnAula2 o){
+			this.ordenLlegaAlumno=o;
+		}
+		public void setOrdenAulaLlena(OrdenEnAula1 o){
+			this.ordenAulaLlena=o;
 		}
 	}
 }

@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Proyecto_5
+namespace Proyecto_5 
 {
 
-	public class Pila : Coleccionable
+	public class Pila : Coleccionable, Ordenable
 	{
 		
 		private List<Comparable>pila;
+		OrdenEnAula1 ordenInicio, ordenAulaLlena;
+		OrdenEnAula2 ordenLlegaAlumno;
+		
 		public Pila(){
 			pila=new List<Comparable>();
 		}
@@ -23,6 +26,19 @@ namespace Proyecto_5
 		
 		public void apilar(Comparable c){
 			this.pila.Add(c);
+			
+			if (this.pila.Count == 1 && ordenInicio != null){
+				ordenInicio.ejecutar();
+			}
+			
+			if (ordenLlegaAlumno != null) {
+				ordenLlegaAlumno.ejecutar(c);
+			}
+			
+			if (this.pila.Count == 40 && ordenAulaLlena != null) {
+				ordenAulaLlena.ejecutar();
+			}
+			
 		}
 		public Comparable desapilar(){
 			Comparable aux=this.pila[this.pila.Count-1];
@@ -56,6 +72,7 @@ namespace Proyecto_5
 		
 		public void agregar(Comparable c){
 			apilar(c);
+			
 		}
 		public bool contiene(Comparable c){
 			for (int i = 0; i < pila.Count; i++) {
@@ -64,6 +81,18 @@ namespace Proyecto_5
 				}
 			}
 			return false;
+		}
+		
+		public void setOrdenInicio(OrdenEnAula1 o){
+			this.ordenInicio=o;
+		}
+		
+		public void setOrdenLlegaAlumno(OrdenEnAula2 o){
+			this.ordenLlegaAlumno=o;
+		}
+		
+		public void setOrdenAulaLlena(OrdenEnAula1 o){
+			this.ordenAulaLlena=o;
 		}
 	}
 }

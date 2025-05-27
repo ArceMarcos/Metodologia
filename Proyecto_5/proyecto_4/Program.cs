@@ -8,58 +8,41 @@ namespace Proyecto_5
 		private static Random random=new Random();
 		public static void Main(string[] args)
 		{
+			//Patron proxy
+			
 			Teacher teacher=new Teacher();
+			IAlumno alumno;
+			Student student;
 			
-			Pila pila=new Pila();
-			Pila pila2=new Pila();
+			for (int i = 0; i < 40; i++) {
+				if (i<20) {
+					alumno=new AlumnoProxy("Proxy");
+					student=new AlumnoAdapter(alumno);
+					teacher.goToClass(student);
+				}
+			}
+			teacher.teachingAClass();
 			
+			Console.ReadKey();
+			Console.Clear();
+			//Patron Command
+			
+			Pila pila= new Pila();
+			Cola cola = new Cola();
+			Aula aula = new Aula();
+			pila.setOrdenInicio(new OrdenInicio(aula));
+			pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+			pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
+//			cola.setOrdenInicio(new OrdenInicio(aula));
+//			cola.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+//			cola.setOrdenAulaLlena(new OrdenAulaLlena(aula));
 			llenar(pila,2);
 			llenar(pila,3);
-			Iterador iterador = pila.CrearIterador();
-			
-			iterador.primero();
-			while (!iterador.fin()) {
-				Student student=new AlumnoAdapter((Alumno)iterador.actual());
-				pila2.agregar((AlumnoAdapter)student);
-				teacher.goToClass(student);
-				iterador.siguiente();
+			llenar(cola,3);
+			llenar(cola,2);
 
-			}
-			
-			teacher.teachingAClass(); 
-			
-			iterador =pila2.CrearIterador();
-			iterador.primero();
-			
-			while (!iterador.fin()) {
-				IAlumnoAdapterDecorado AlumnoD=(AlumnoAdapter)iterador.actual();
-				AlumnoD= new DecoradoLegajo((AlumnoAdapter)iterador.actual(),AlumnoD);
-				AlumnoD= new DecoradoNotaEnLetras((AlumnoAdapter)iterador.actual(),AlumnoD);
-				AlumnoD= new DecoradoPromocion((AlumnoAdapter)iterador.actual(),AlumnoD);
-				AlumnoD= new DecoradoRecuadro((AlumnoAdapter)iterador.actual(),AlumnoD);
-				Console.WriteLine(AlumnoD.showResult());
-				iterador.siguiente();
-			}
 
 			Console.ReadKey();
-//			Profesor profe = new Profesor("Marcos",12456789,1);
-//			
-//			Pila pila=new Pila();
-//			llenar(pila,2);
-//			Iterador iterador = pila.CrearIterador();
-//			
-//			iterador.primero();
-//			while (!iterador.fin()) {
-//				profe.agregarObservador((Observador)iterador.actual());
-//				iterador.siguiente();
-//			}
-//			
-//			dictadoDeClase(profe);
-//			imprimirElementos(pila);
-//						
-//			Console.Write("Press any key to continue . . . ");
-//			Console.ReadKey(true);
-//		}
 		}
 		
 		public static Coleccionable llenar(Coleccionable c,int opcion){
