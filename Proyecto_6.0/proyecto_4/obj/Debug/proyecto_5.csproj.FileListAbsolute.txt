@@ -1,0 +1,12 @@
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_5\proyecto_4\bin\Debug\proyecto_4.exe.config
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_5\proyecto_4\bin\Debug\proyecto_4.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_5\proyecto_4\bin\Debug\proyecto_4.pdb
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_5\proyecto_4\obj\Debug\proyecto_5.csprojResolveAssemblyReference.cache
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_5\proyecto_4\obj\Debug\proyecto_4.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_5\proyecto_4\obj\Debug\proyecto_4.pdb
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_6.0\proyecto_4\obj\Debug\proyecto_5.csprojResolveAssemblyReference.cache
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_6.0\proyecto_4\obj\Debug\proyecto_4.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_6.0\proyecto_4\obj\Debug\proyecto_4.pdb
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_6.0\proyecto_4\bin\Debug\proyecto_4.exe.config
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_6.0\proyecto_4\bin\Debug\proyecto_4.exe
+D:\Users\Estan\Desktop\Documentación  Marcos\repositorio-git-MyP\Proyecto_6.0\proyecto_4\bin\Debug\proyecto_4.pdb
